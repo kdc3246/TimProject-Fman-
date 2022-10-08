@@ -1,0 +1,47 @@
+/* Layout */
+.wrapper {
+    background: #e9ecef;
+    padding-top: 64px;
+    height: 100vh;
+}
+
+header h1.title{
+    background-color: tomato;
+    height: 50px;
+
+    font-size: 34px;
+    font-weight: 700;
+    text-align: center;
+
+    padding-top: 5px;
+}
+
+section.main {
+    background: #e9ecef;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+/* table {
+    border-collapse: collapse;
+} */
+
+/* 월,화,수,목,금,토,일 */
+section.main #calendar.center .tdDay {
+    border: 1px solid gray;
+    width: 300px;
+    height: 120px;
+}
+
+/* 1~31일까지 */
+section.main #calendar.center .addrow {
+    border: 1px solid gray;
+    width: 300px;
+    height: 120px;
+}
+tbody .addrow {
+    border: 1px solid gray;
+    padding: 3px;
+    width: 300px;
+    height: 120px;
+}

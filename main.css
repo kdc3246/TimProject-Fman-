@@ -1,0 +1,149 @@
+/* 기본 설정되어있는것들 초기화 및 폰트 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* html 사이즈 */
+/* html {
+    font-size: 62.5%;
+} */
+
+/* body 대신에 쓰는 div .wrapper */
+.wrapper {
+    /* body 전체 가로길이 100% 세로길이 100vh 가로길이를 따라간다. */
+    width: 100%;
+    height: 100vh;
+    /* 배경화면 전체를 검정색으로 해줌. (눈 보호) */
+    background-color: #12121f;
+    /* 글색은 하얀색으로 해주어 보이게 해줌. */
+    color: #eee;
+
+    /* Flex 컨테이너(.wrapper)에 display: flex;를 적용하는게 시작. */
+    /* FLex 아이템들은 가로 방향으로 배치, .wrapper가 가진 내용물의 width만큼만 차지 */
+    /* height는 Flex 컨테이너(.wrapper)의 높이만큼 늘어남. */
+
+    /* justify는 메인축(오뎅꼬치)방향으로 정렬 아이템(월,화,수,목,금,토,일)들을 가운데로 정렬 */
+
+    /* align은 수직축(오뎅을 뜯어내는)방향으로 정렬 아이템들을 가운데로 정렬*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* rem을 넣어주는 이유는 크기가 변해야하는 곳이여서 넣어줬다. 디자인을 구성할때 사용하면 좋다고합니다. */
+
+/* 달력을 나타나게하는 div 클래스 */
+.calendar {
+    width: 45rem;
+    height: 52rem;
+
+    /* 달력의 배경색은 조금 어두운 그레이색을 넣었다. */
+    background-color: #222227;
+    /* 박스 새도우를 넣어줘서 달력부분의 그림자를 넣어주었다. */
+    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+/* 손가락 이모티콘과 제목 */
+.month {
+    width: 100%;
+    height: 12rem;
+
+    background-color: #167e56;
+
+    display: flex;
+    /* space-between = 아이템들 사이에 균일한 간격을 넣어줌. */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    /* 텍스트를 중앙 정렬해주었다. */
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+/* 손가락 이모티콘 span 속성 설정 */
+.month span{
+    font-size: 2.5rem;
+    /* 마우스 포인터가 요소 위에 있을 때 표시되도록 마우스 커서를 설정해줬습니다. */
+    /* pointer는 일반적으로 가리키는 손의 이미지입니다. */
+    cursor: pointer;
+}
+/* 큰 제목 2022년 몇월! 속성 설정 */
+.month h1 {
+    /* 폰트 사이즈는 3rem, 굵기는 400을 주었습니다. */
+    font-size: 3rem;
+    font-weight: 400;
+
+    /* 요소의 텍스트를 대문자화하는 방법을 지정합니다. 하지만 여기서는 한글을 
+    쓰기때문에 필요X (영어로 바꾸게되면 쓰면 좋다.)  */
+    /* text-transform: uppercase; */
+
+    /* 텍스트 문자 간의 간격 동작을 설정합니다. */
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+/* p 여기는 몇 월이라네~ */
+.month p {
+    font-size: 1.6rem;
+}
+/* 월,화,수,목,금,토,일(div)의 부모인 div 클래스.weekdays 속성 설정 */
+.weekdays {
+    width: 100%;
+    height: 5rem;
+
+    padding: 0 0.4rem;
+    /* Flex 아이템들을 가로로 배치 */
+    display: flex;
+    align-items: center;
+
+    /* text-align: center; */
+}
+
+/* div = 월,화,수,목,금,토,일(.weekdays 자식) 속성 설정 */
+.weekdays div {
+    font-size: 1.5rem;
+    font-weight: 400;
+    /* 텍스트 문자 간의 간격 설정 */
+    letter-spacing: 0.1rem;
+    width: 45rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+}
+
+.days div {
+    font-size: 1.4rem;
+    margin: 0.3rem;
+    width: calc(40.2/7)/;
+    height: 5rem;
+}
+/* 월,화,수,목,금,토,일 div에서 .today 오늘인 날짜뺴고 나머지 날에 hover을 주고
+오늘 날짜는 hover 애니메이션이 안들어가게 not()을 사용해주었다. */
+.days div:hover:not(.today) {
+    background-color: #262626;
+    border: 0.2rem solid #777;
+    cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+    opacity: 0.5;
+}
+
+.today {
+    background-color: #167e56;
+}
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-day Calender</title>
+
+    <!-- reset.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <!-- linear icons -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- custom js -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="innerWrapper">
+            <header>
+                <h1 class="title">
+                    <span class="lnr lnr-calendar-full"> D-day Calender</span>
+                </h1>
+            </header>
+            <section class="main">
+                <div class="calender">
+                    <div id="calendarWrapper">
+                        <div id="calendarBox">
+                            <table id="calendar" class="center">
+                                <tbody>
+                                    <tr>
+                                        <td id="pre" class="center">
+                                            <div class="left-hand"><span class="lnr lnr-pointer-left"></span></div>
+                                        </td>
+                                        <td colspan="5" class="center" id="calendarTitle">
+                                        2022년 10월</td>
+                                         <td id="next" class="center">
+                                            <div class="right-hand"><span class="lnr lnr-pointer-right"></span></div>
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tdDay" date-day="0" style="color: #ac3834;">일</td>
+                                        <td class="tdDay" date-day="1">월</td>
+                                        <td class="tdDay" date-day="2">화</td>
+                                        <td class="tdDay" date-day="3">수</td>
+                                        <td class="tdDay" date-day="4">목</td>
+                                        <td class="tdDay" date-day="5">금</td>
+                                        <td class="tdDay" date-day="6" style="color: #016699;">토</td>
+                                    </tr>
+                                    <tr class="addrow">
+                                        <td class="sunday"></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td class="saturday" id="1" align="center">1</td>
+                                    </tr>
+                                    <tr class="addrow">
+                                        <td class="sunday" id="2" align="center">2</td>
+                                        <td id="3" align="center">3</td>
+                                        <td id="4" align="center">4</td>
+                                        <td id="5" align="center">5</td>
+                                        <td id="6" align="center">6</td>
+                                        <td id="7" align="center">7</td>
+                                        <td class="saturday" id="8" align="center">8</td>
+                                    </tr>
+                                    <tr class="addrow">
+                                        <td class="sunday" id="9" align="center">9</td>
+                                        <td id="10" align="center">10</td>
+                                        <td id="11" align="center">11</td>
+                                        <td id="12" align="center">12</td>
+                                        <td id="13" align="center">13</td>
+                                        <td id="14" align="center">14</td>
+                                        <td class="saturday" id="15" align="center">15</td>
+                                    </tr>
+                                    <tr class="addrow">
+                                        <td class="sunday" id="16" align="center">16</td>
+                                        <td id="17" align="center">17</td>
+                                        <td id="18" align="center">18</td>
+                                        <td id="19" align="center">19</td>
+                                        <td id="20" align="center">20</td>
+                                        <td id="21" align="center">21</td>
+                                        <td class="saturday" id="22" align="center">22</td>
+                                    </tr>
+                                    <tr class="addrow">
+                                        <td class="sunday" id="23" align="center">23</td>
+                                        <td id="24" align="center">24</td>
+                                        <td id="25" align="center">25</td>
+                                        <td id="26" align="center">26</td>
+                                        <td id="27" align="center">27</td>
+                                        <td id="28" align="center">28</td>
+                                        <td class="saturday" id="29" align="center">29</td>
+                                    </tr>
+                                    <tr class="addrow">
+                                        <td class="sunday" id="30" align="center">30</td>
+                                        <td id="31" align="center">31</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="h1">
+                <h1>3조 김영우, 김동철, 변의준, 최정현</h1>
+            </div>
+            <div class="h2">
+                <h2>＠ 2022. --3조--</h2>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
