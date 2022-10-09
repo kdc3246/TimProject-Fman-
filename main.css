@@ -104,13 +104,12 @@
 }
 
 /* div = 월,화,수,목,금,토,일(.weekdays 자식) 속성 설정 */
-.weekdays div {
+.weekdays div{
     font-size: 1.5rem;
     font-weight: 400;
     /* 텍스트 문자 간의 간격 설정 */
     letter-spacing: 0.1rem;
-    width: 45rem;
-
+    width: calc(44.2rem/7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,12 +123,17 @@
     padding: 0.2rem;
 }
 
-.days div {
+.days div{
     font-size: 1.4rem;
     margin: 0.3rem;
-    width: calc(40.2/7)/;
+    width: calc(40.2rem /7);
     height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
 }
+
 /* 월,화,수,목,금,토,일 div에서 .today 오늘인 날짜뺴고 나머지 날에 hover을 주고
 오늘 날짜는 hover 애니메이션이 안들어가게 not()을 사용해주었다. */
 .days div:hover:not(.today) {
@@ -140,10 +144,12 @@
 
 .prev-date,
 .next-date {
+    /* 지난 달과 다음 달에 보이는 날짜를 0.5정도 투명화를 주었다. */
     opacity: 0.5;
 }
 
 .today {
+    /* 오늘 날은 초록색으로 표시를해주었다. */
     background-color: #167e56;
 }
 
